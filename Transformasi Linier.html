@@ -1,0 +1,728 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>TRANSFORMASI LINIER &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Transformasi Linier';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="PAGE RANK ALGORITHM" href="aplikasi%20KAL.html" />
+    <link rel="prev" title="EIGEN VALUE &amp; EIGEN VECTOR" href="EIGEN%20VALUE%20%26%20EIGEN%20VECTOR.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/foto.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/foto.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to my web
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Sistem%20Persamaan%20Linier.html">SISTEM PERSAMAAN LINIER</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="MATRIKS%20%281%29.html">MATRIKS</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Determinan.html">DETERMINAN</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="EIGEN%20VALUE%20%26%20EIGEN%20VECTOR.html">EIGEN VALUE &amp; EIGEN VECTOR</a></li>
+
+
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">TRANSFORMASI LINIER</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="aplikasi%20KAL.html">PAGE RANK ALGORITHM</a></li>
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTransformasi Linier.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Transformasi Linier.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>TRANSFORMASI LINIER</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">TRANSFORMASI LINIER</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#transformasi">TRANSFORMASI</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-transformasi-t-r-3-ke-r-3">CONTOH TRANSFORMASI T = R_{3} ke R_{3}</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-transformasi-refleksi">MATRIKS TRANSFORMASI REFLEKSI</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-matriks-transformasi-refleksi">CONTOH MATRIKS TRANSFORMASI REFLEKSI</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#referensi">REFERENSI</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="transformasi-linier">
+<h1>TRANSFORMASI LINIER<a class="headerlink" href="#transformasi-linier" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="transformasi">
+<h1>TRANSFORMASI<a class="headerlink" href="#transformasi" title="Link to this heading">#</a></h1>
+<p>Transformasi linier merupakan sebuah fungsi yang memetakan suatu ruang vector B ke suatu ruang vector C, sehingga variable A dinyatakan sebagai transformasi linier dari B ke C. Pernyataan tersebut ditunjukkan pada skema dibawah ini :</p>
+<p><strong>Jika A : B C</strong></p>
+<p>Variabel akan disebut sebagai transformasi linier jika semua vector u dan v yang ada pada B dan semua scalar c, seperti :</p>
+<p><strong>T(u + v) = T(u) + T(v)</strong></p>
+<p><strong>T(cu) = cT(u)</strong></p>
+<p>Transformasi linier akan tampak terlihat jelas jika B = C dan akan dinyatakan
+dalam bentuk A: B (B yang disebut dengan operator linier pada</p>
+<p>mentranformasikan suatu objek dari dimensi dua ke dimensi lain, diawali dengan satu vektor lalu tranformasi menjadi vektor lain.</p>
+<p>Misalkan <span class="math notranslate nohighlight">\(u=\binom{u_1}{u_2}\)</span> dan <span class="math notranslate nohighlight">\(v=\binom{v_1}{v_2}\)</span>
+$<span class="math notranslate nohighlight">\(
+u+v=\binom{u_1}{u_2}+\binom{v_1}{v_2}=\binom{u_1+v_1}{u_2+v_2}
+\)</span>$</p>
+<p>Sekarang, terapkan <span class="math notranslate nohighlight">\(T\)</span> pada <span class="math notranslate nohighlight">\(u+v\)</span> :
+$<span class="math notranslate nohighlight">\(
+T(u+v)=T\left(\binom{u_1+v_1}{u_2+v_2}\right)=A\binom{u_1+v_1}{u_2+v_2}
+\)</span>$</p>
+<p>Lakukan perkalian matriks:
+$<span class="math notranslate nohighlight">\(
+A\binom{u_1+v_1}{u_2+v_2}=\left(\begin{array}{cc}
+-1 &amp; 0 \\
+0 &amp; 1
+\end{array}\right)\binom{u_1+v_1}{u_2+v_2}=\binom{-\left(u_1+v_1\right)}{u_2+v_2}
+\)</span>$</p>
+<p>Di sisi lain, kita juga hitung <span class="math notranslate nohighlight">\(T(u)\)</span> dan <span class="math notranslate nohighlight">\(\downarrow v\)</span> ) masing-masing:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+T(u)=A\binom{u_1}{u_2}=\left(\begin{array}{cc}
+-1 &amp; 0 \\
+0 &amp; 1
+\end{array}\right)\binom{u_1}{u_2}=\binom{-u_1}{u_2} \\
+T(v)=A\binom{v_1}{v_2}=\left(\begin{array}{cc}
+-1 &amp; 0 \\
+0 &amp; 1
+\end{array}\right)\binom{v_1}{v_2}=\binom{-v_1}{v_2}
+\end{gathered}
+\end{split}\]</div>
+<p>Jumlahkan <span class="math notranslate nohighlight">\(T(u)\)</span> dan <span class="math notranslate nohighlight">\(T(v)\)</span> :
+$<span class="math notranslate nohighlight">\(
+T(u)+T(v)=\binom{-u_1}{u_2}+\binom{-v_1}{v_2}=\binom{-u_1-v_1}{u_2+v_2}
+\)</span>$</p>
+<p>Sehingga kita melihat bahwa:
+$<span class="math notranslate nohighlight">\(
+T(u+v)=\binom{-\left(u_1+v_1\right)}{u_2+v_2}=\binom{-u_1-v_1}{u_2+v_2}=T(u)+T(v)
+\)</span>$</p>
+<p>Transformasi <span class="math notranslate nohighlight">\(T\)</span> memenuhi sifat aditif <span class="math notranslate nohighlight">\(T(u+v)=T(u)+T(v)\)</span>.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="contoh-transformasi-t-r-3-ke-r-3">
+<h1>CONTOH TRANSFORMASI T = R_{3} ke R_{3}<a class="headerlink" href="#contoh-transformasi-t-r-3-ke-r-3" title="Link to this heading">#</a></h1>
+<p><span class="math notranslate nohighlight">\(T\left(\left[\begin{array}{l}x_1 \\ x_2 \\ x_3\end{array}\right]\right)=\left[\begin{array}{c}x_1+2 x_2+x_3 \\ x_1+5 x_2 \\ x_3\end{array}\right]\)</span></p>
+<p>Pengerjaannya :</p>
+<p><span class="math notranslate nohighlight">\(\begin{aligned} &amp; \mathbf{e}_1=(1,0,0) \rightarrow \mathrm{T}\left(\mathbf{e}_1\right)=\mathrm{T}\left(\left[\begin{array}{l}1 \\ 0 \\ 0\end{array}\right]\right)=\left(\begin{array}{c}1+2(0)+0 \\ 1+5(0) \\ 0\end{array}\right)=\left(\begin{array}{l}1 \\ 1 \\ 0\end{array}\right) \\ &amp; \mathbf{e}_2=(0,1,0) \rightarrow \mathrm{T}\left(\mathbf{e}_2\right)=\mathrm{T}\left(\left[\begin{array}{l}0 \\ 1 \\ 0\end{array}\right]\right)=\left(\begin{array}{c}0+2(1)+0 \\ 0+5(1) \\ 0\end{array}\right)=\left(\begin{array}{l}2 \\ 5 \\ 0\end{array}\right)\end{aligned}\)</span>
+<span class="math notranslate nohighlight">\(\mathbf{e}_3=(0,0,1) \rightarrow \mathrm{T}\left(\mathbf{e}_3\right)=\mathrm{T}\left(\left[\begin{array}{l}0 \\ 0 \\ 1\end{array}\right]\right)=\left(\begin{array}{c}0+2(0)+1 \\ 0+5(0) \\ 1\end{array}\right)=\left(\begin{array}{l}1 \\ 0 \\ 1\end{array}\right)\)</span></p>
+<p>Hasil matriks standard nya</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  A =
+  \begin{bmatrix}
+  1 &amp; 2 &amp; 1 \\
+  1 &amp; 5 &amp; 0 \\
+  0 &amp; 0 &amp; 1 \\
+  \end{bmatrix}
+  \end{split}\]</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="matriks-transformasi-refleksi">
+<h1>MATRIKS TRANSFORMASI REFLEKSI<a class="headerlink" href="#matriks-transformasi-refleksi" title="Link to this heading">#</a></h1>
+<p>Matriks Transformasi Refleksi atau perpindahan matriks yang tampilannya menggunakan metode pencerminan merupakan matriks transformasi yang mempresentasikan operasi refleksi atau pencerminan dari suatu vektor terhadap suatu gari atau bidang yang ada di dalam vektor. dimana pada jenis transformasi linier ini akan memetakan setiap titik pada satu sisi garis atau bidang ke posisi yang sama di sisi lain.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="contoh-matriks-transformasi-refleksi">
+<h1>CONTOH MATRIKS TRANSFORMASI REFLEKSI<a class="headerlink" href="#contoh-matriks-transformasi-refleksi" title="Link to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\begin{split}T
+  \begin{bmatrix}
+  2  \\
+  0  \\
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+  -2  \\
+  0  \\
+  \end{bmatrix}
+  \end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}T
+  \begin{bmatrix}
+  2  \\
+  2  \\
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+  -2  \\
+  2  \\
+  \end{bmatrix}
+  \end{split}\]</div>
+<p>Titik (2, 0) direfleksikan menjadi (-2, 0)</p>
+<p>Titik (2, 2) direfleksikan menjadi (-2, 2)</p>
+<p>inisialisasi terlebih dahulu:</p>
+<div class="math notranslate nohighlight">
+\[
+T\left(\binom{x}{y}\right)=A\binom{x}{y}
+\]</div>
+<p>Diketahui bahwa:
+$<span class="math notranslate nohighlight">\(
+\begin{aligned}
+&amp; A\binom{2}{0}=\binom{-2}{0} \\
+&amp; A\binom{2}{2}=\binom{-2}{2}
+\end{aligned}
+\)</span>$</p>
+<p>Bentuk umum <span class="math notranslate nohighlight">\(A\)</span> :
+$<span class="math notranslate nohighlight">\(
+A=\left(\begin{array}{ll}
+a &amp; b \\
+c &amp; d
+\end{array}\right)
+\)</span>$</p>
+<p>Sehingga perhitungan vektor pertamanya:
+$<span class="math notranslate nohighlight">\(
+\left(\begin{array}{ll}
+a &amp; b \\
+c &amp; d
+\end{array}\right)\binom{2}{0}=\binom{2 a}{2 c}=\binom{-2}{0}
+\)</span>$</p>
+<p>Sehingga persamaannya menjadi:
+$<span class="math notranslate nohighlight">\(
+\begin{gathered}
+2 a=-2 \Longrightarrow a=-1 \\
+2 c=0 \Longrightarrow c=0
+\end{gathered}
+\)</span>$</p>
+<p>Perhitungan vektor kedua:
+$<span class="math notranslate nohighlight">\(
+\left(\begin{array}{ll}
+a &amp; b \\
+c &amp; d
+\end{array}\right)\binom{2}{2}=\binom{2 a+2 b}{2 c+2 d}=\binom{-2}{2}
+\)</span>$</p>
+<p>Sehingga persamaannya:
+$<span class="math notranslate nohighlight">\(
+\begin{gathered}
+2 a+2 b=-2 \Longrightarrow-2+2 b=-2 \Longrightarrow 2 b=0 \Longrightarrow b=0 \\
+2 c+2 d=2 \Longrightarrow 0+2 d=2 \Longrightarrow 2 d=2 \Longrightarrow d=1
+\end{gathered}
+\)</span>$</p>
+<p>Jadi, matriks transformasi refleksi <span class="math notranslate nohighlight">\(A\)</span> adalah:
+$<span class="math notranslate nohighlight">\(
+A=\downarrow\left(\begin{array}{cc}
+-1 &amp; 0 \\
+0 &amp; 1
+\end{array}\right)
+\)</span>$</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="referensi">
+<h1>REFERENSI<a class="headerlink" href="#referensi" title="Link to this heading">#</a></h1>
+<p><a class="reference external" href="https://www.mathway.com/id/examples/chemi/linear-transformations/proving-a-transformation-is-linear?id=266">https://www.mathway.com/id/examples/chemi/linear-transformations/proving-a-transformation-is-linear?id=266</a></p>
+<p><a class="reference external" href="https://dosen.itats.ac.id/anitateku/wp-content/uploads/sites/17/2015/11/5.-TRANSFORMASI-LINIER_new.pdf">https://dosen.itats.ac.id/anitateku/wp-content/uploads/sites/17/2015/11/5.-TRANSFORMASI-LINIER_new.pdf</a></p>
+<p><a class="reference external" href="https://repository.unikom.ac.id/57251/1/TRANSFORMASI%20LINEAR.docx">https://repository.unikom.ac.id/57251/1/TRANSFORMASI LINEAR.docx</a></p>
+<p><a class="reference external" href="https://repository.dinus.ac.id/docs/ajar/11-12-Transformasi_Linear.pdf">https://repository.dinus.ac.id/docs/ajar/11-12-Transformasi_Linear.pdf</a></p>
+<p><a class="reference external" href="https://informatika.stei.itb.ac.id/~rinaldi.munir/AljabarGeometri/2020-2021/Algeo-17-Ruang-vektor-umum-Bagian4.pdf">https://informatika.stei.itb.ac.id/~rinaldi.munir/AljabarGeometri/2020-2021/Algeo-17-Ruang-vektor-umum-Bagian4.pdf</a></p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="EIGEN%20VALUE%20%26%20EIGEN%20VECTOR.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">EIGEN VALUE &amp; EIGEN VECTOR</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="aplikasi%20KAL.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">PAGE RANK ALGORITHM</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">TRANSFORMASI LINIER</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#transformasi">TRANSFORMASI</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-transformasi-t-r-3-ke-r-3">CONTOH TRANSFORMASI T = R_{3} ke R_{3}</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-transformasi-refleksi">MATRIKS TRANSFORMASI REFLEKSI</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-matriks-transformasi-refleksi">CONTOH MATRIKS TRANSFORMASI REFLEKSI</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#referensi">REFERENSI</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
